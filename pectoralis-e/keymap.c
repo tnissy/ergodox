@@ -7,9 +7,8 @@ enum custom_keycodes {
   ST_MACRO_0,
   ST_MACRO_1,
   ST_MACRO_2,
-  JP_LSPO,
-  JP_RSPC,
 };
+
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -25,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    TG(2),          LALT(KC_F4),    LCTL(KC_W),     LALT(LCTL(KC_TAB)),LCTL(KC_F),     LALT(KC_TAB),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          RCTL(RSFT(KC_TAB)),RALT(KC_LEFT),  RALT(KC_RIGHT), RCTL(KC_TAB),   KC_NO,
+    TO(2),          LALT(KC_F4),    LCTL(KC_W),     LALT(LCTL(KC_TAB)),LCTL(KC_F),     LALT(KC_TAB),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          RCTL(RSFT(KC_TAB)),RALT(KC_LEFT),  RALT(KC_RIGHT), RCTL(KC_TAB),   KC_NO,
     ST_MACRO_0,     LCTL(KC_A),     LCTL(KC_S),     KC_LCTRL,       KC_LSHIFT,      ST_MACRO_1,                                                                     KC_NO,          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       KC_NO,
     LCTL(KC_Y),     LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_V),     LGUI(KC_V),     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_HOME,        KC_PGDOWN,      KC_PGUP,        KC_END,         KC_NO,
     KC_TRANSPARENT, KC_N,           KC_LGUI,        KC_LALT,        KC_TRANSPARENT,                                                                                                 KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,
@@ -35,10 +34,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [2] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_NO,          KC_7,           KC_8,           KC_9,           KC_LANG2,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_LBRACKET,    KC_RBRACKET,    KC_NO,          KC_PIPE,
+    TO(0),          KC_NO,          KC_7,           KC_8,           KC_9,           KC_LANG2,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_LBRACKET,    KC_RBRACKET,    KC_NO,          KC_PIPE,
     KC_TRANSPARENT, KC_SLASH,       KC_4,           KC_5,           KC_6,           KC_TILD,                                                                        DYN_MACRO_PLAY1,KC_PLUS,        KC_LPRN,        KC_RPRN,        KC_UNDS,        KC_COLN,
-    KC_TRANSPARENT, KC_COLN,        KC_1,           KC_2,           KC_3,           KC_GRAVE,       KC_TRANSPARENT,                                 KC_TRANSPARENT, DYN_MACRO_PLAY2,KC_EQUAL,       KC_LABK,        KC_RABK,        KC_QUES,        KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_0,           KC_COMMA,       KC_DOT,                                                                                                         KC_TRANSPARENT, KC_CAPSLOCK,    KC_DQUO,        KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_COLN,        KC_1,           KC_2,           KC_3,           KC_GRAVE,       KC_TRANSPARENT,                                 KC_TRANSPARENT, DYN_MACRO_PLAY2,KC_EQUAL,       KC_LABK,        KC_RABK,        KC_QUES,        RSFT(KC_RCTRL),
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_0,           KC_COMMA,       KC_DOT,                                                                                                         KC_TRANSPARENT, KC_CAPSLOCK,    KC_DQUO,        KC_NO,          KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_ENTER,       KC_BSPACE,      KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_2,     KC_NO
@@ -55,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [4] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    TG(5),          LGUI(KC_Q),     LGUI(KC_W),     LCTL(KC_UP),    LGUI(KC_F),     LGUI(KC_TAB),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          RCTL(RSFT(KC_TAB)),LGUI(KC_LEFT),  RGUI(KC_RIGHT), RCTL(KC_TAB),   KC_NO,
+    TO(5),          LGUI(KC_Q),     LGUI(KC_W),     LCTL(KC_UP),    LGUI(KC_F),     LGUI(KC_TAB),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          RCTL(RSFT(KC_TAB)),LGUI(KC_LEFT),  RGUI(KC_RIGHT), RCTL(KC_TAB),   KC_NO,
     LGUI(KC_BSPACE),LGUI(KC_A),     LGUI(KC_S),     KC_LGUI,        KC_LSHIFT,      LCTL(KC_K),                                                                     KC_NO,          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       KC_NO,
     LGUI(KC_Y),     LGUI(KC_Z),     LGUI(KC_X),     LGUI(KC_C),     LGUI(KC_V),     LGUI(LCTL(KC_V)),KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          RCTL(KC_A),     KC_PGDOWN,      KC_PGUP,        RCTL(KC_E),     KC_NO,
     KC_TRANSPARENT, KC_N,           KC_LCTRL,       KC_LALT,        KC_TRANSPARENT,                                                                                                 KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,
@@ -65,10 +64,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [5] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_NO,          KC_7,           KC_8,           KC_9,           KC_LANG2,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_LBRACKET,    KC_RBRACKET,    KC_NO,          KC_PIPE,
+    TO(3),          KC_NO,          KC_7,           KC_8,           KC_9,           KC_LANG2,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_LBRACKET,    KC_RBRACKET,    KC_NO,          KC_PIPE,
     KC_TRANSPARENT, KC_NO,          KC_4,           KC_5,           KC_6,           KC_SLASH,                                                                       DYN_MACRO_PLAY1,KC_PLUS,        KC_LPRN,        KC_RPRN,        KC_UNDS,        KC_COLN,
-    KC_TRANSPARENT, KC_NO,          KC_1,           KC_2,           KC_3,           KC_COLN,        KC_TRANSPARENT,                                 KC_TRANSPARENT, DYN_MACRO_PLAY2,KC_EQUAL,       KC_LABK,        KC_RABK,        KC_QUES,        KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_LGUI,        KC_0,           KC_COMMA,       KC_DOT,                                                                                                         KC_TRANSPARENT, KC_CAPSLOCK,    KC_DQUO,        RALT(KC_RGUI),  KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_NO,          KC_1,           KC_2,           KC_3,           KC_COLN,        KC_TRANSPARENT,                                 KC_TRANSPARENT, DYN_MACRO_PLAY2,KC_EQUAL,       KC_LABK,        KC_RABK,        KC_QUES,        RALT(KC_RGUI),
+    KC_TRANSPARENT, KC_LGUI,        KC_0,           KC_COMMA,       KC_DOT,                                                                                                         KC_TRANSPARENT, KC_CAPSLOCK,    KC_DQUO,        KC_NO,          KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_ENTER,       KC_BSPACE,      KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO
@@ -95,7 +94,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-
 const uint16_t PROGMEM combo0[] = { KC_D, KC_F, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM combo2[] = { KC_C, KC_V, COMBO_END};
@@ -112,29 +110,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo5, KC_F7),
 };
 
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case ST_MACRO_0:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_HOME)) SS_DELAY(50) SS_TAP(X_BSPACE));
-    }
-    break;
-    case ST_MACRO_1:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_END)) SS_DELAY(50) SS_TAP(X_DELETE));
-    }
-    break;
-    case ST_MACRO_2:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_LCTL(SS_TAP(X_DELETE))) SS_DELAY(300) "99295\t");
-    }
-    break;
-
-  }
-  return true;
-}
-
 bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LT(2,KC_LANG1):
@@ -145,6 +120,7 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
             return true;
     }
 }
+
 
 uint16_t layer_state_set_user(uint16_t state) {
     uint8_t layer = biton16(state);
@@ -184,7 +160,26 @@ uint16_t layer_state_set_user(uint16_t state) {
       break;
   }
   return state;
-};
+}
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case ST_MACRO_0:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_HOME)) SS_DELAY(50) SS_TAP(X_BSPACE));
+    }
+    break;
+    case ST_MACRO_1:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_END)) SS_DELAY(50) SS_TAP(X_DELETE));
+    }
+    break;
+    case ST_MACRO_2:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LALT(SS_LCTL(SS_TAP(X_DELETE))) SS_DELAY(300) "99295\t");
+    }
+    break;
 
-
+  }
+  return true;
+}
